@@ -1,12 +1,18 @@
 phabricator-tools
 =================
 
-Tools and daemons for administering lots of Phabricator instances and
-integrating them with other tools.
+MONTY HAS BEEN HERE
+-------------------
 
-[![Build Status](https://travis-ci.org/bloomberg/phabricator-tools.svg)](https://travis-ci.org/bloomberg/phabricator-tools)
-[![Pull Requests](http://issuestats.com/github/bloomberg/phabricator-tools/badge/pr?style=flat)](http://issuestats.com/github/bloomberg/phabricator-tools)
-[![Issues](http://issuestats.com/github/bloomberg/phabricator-tools/badge/issue?style=flat)](http://issuestats.com/github/bloomberg/phabricator-tools)
+There is a file, "things-I-did" which contains the things I did to get it up
+and going.
+
+There is also migrate-to-phab.sql which has the storyboard-to-phabricator
+database migration. It assumes a storyboard db imported adjacent to the
+phabricator db.
+
+Finally, there is the local.json that was deployed. It's mentioned in the
+things-I-did
 
 Overview
 --------

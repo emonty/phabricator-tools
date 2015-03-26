@@ -1,0 +1,24 @@
+git clone https://github.com/emonty/phabricator-tools.git
+
+sudo puppet apply phabricator-tools/vagrant/puppet/phabricator/manifests/default.pp --modulepath phabricator-tools/vagrant/puppet
+
+sudo cp ~/local.json /phabricator/instances/dev/phabricator/conf/local/local.json
+
+sudo /phabricator/instances/dev/phabricator/bin/phd start
+
+add to my.cnf:
+
+sql_mode=STRICT_ALL_TABLES
+ft_stopword_file=/phabricator/instances/dev/phabricator/resources/sql/stopwords.txt
+ft_min_word_len=3
+ft_boolean_syntax=' |-><()~*:""&^'
+innodb_buffer_pool_size=600M
+
+Then run:
+
+REPAIR TABLE phabricator_search.search_documentfield;
+
+sudo mkdir /var/lib/git
+apt-get install exim4 python-pygments
+
+# I did not do: https://secure.phabricator.com/book/phabricator/article/configuring_file_domain/
